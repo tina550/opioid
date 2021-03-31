@@ -1,0 +1,96 @@
+@import '../../../themes/mixins/link';
+
+.completionContentWrapper {
+  color: var(--theme-dialog-text-color);
+  font-family: var(--font-light);
+
+  p {
+    line-height: 1.38;
+  }
+
+  .linkInstructionsWrapper {
+    border-bottom: 1px solid var(--theme-dialog-border-color);
+    margin-top: 11px;
+  }
+
+  .addressInstructionsWrapper {
+    margin-top: 20px;
+  }
+
+  .infoBoxLabel {
+    font-weight: bold;
+    margin-top: 11px;
+  }
+
+  .infoBox {
+    background-color: var(
+      --theme-paper-wallet-create-certificate-dialog-explorer-link-background-color
+    );
+    border-radius: 2px;
+    font-family: var(--font-mono);
+    letter-spacing: 0.5px;
+    line-height: 1.38;
+    margin: 10px 0 20px;
+    min-height: 50px;
+    padding: 14px 23px;
+    text-align: center;
+    user-select: text;
+    word-wrap: break-word;
+
+    .link {
+      border-color: var(
+        --theme-paper-wallet-create-certificate-dialog-explorer-link-color
+      );
+      color: var(
+        --theme-paper-wallet-create-certificate-dialog-explorer-link-color
+      );
+      font-family: var(--font-mono);
+      font-size: 16px;
+      &:after {
+        background-color: var(
+          --theme-paper-wallet-create-certificate-dialog-explorer-link-color
+        );
+      }
+    }
+  }
+
+  .qrCode {
+    display: flex;
+
+    canvas {
+      border: 4px solid var(--theme-receive-qr-code-background-color);
+      box-sizing: content-box;
+      margin: auto;
+    }
+  }
+
+  .copyIconBig,
+  .copyIcon {
+    cursor: pointer;
+    object-fit: contain;
+  }
+
+  .copyIconBig {
+    margin-left: 6px;
+    vertical-align: middle;
+
+    & > svg {
+      height: 14.5px;
+      width: 11.5px;
+      path {
+        fill: var(--theme-icon-copy-address-color);
+      }
+    }
+  }
+
+  .copyIcon {
+    margin-left: 4px;
+    & > svg {
+      height: 12px;
+      width: 10px;
+      path {
+        fill: var(--theme-icon-copy-address-color);
+      }
+    }
+  }
+}

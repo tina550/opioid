@@ -1,0 +1,13 @@
+.component {
+  background-color: var(--theme-test-environment-label-background-color);
+  border-radius: 0 0 0 2px;
+  color: var(--theme-test-environment-label-text-color);
+  font-family: var(--font-regular);
+  font-size: 10px;
+  justify-content: center;
+  line-height: 12px;
+  padding: 3px 6px 4px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

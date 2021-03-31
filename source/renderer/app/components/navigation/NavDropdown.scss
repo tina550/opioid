@@ -1,0 +1,93 @@
+.component {
+  height: 100%;
+  width: 100%;
+
+  > div {
+    height: 100%;
+    width: 100%;
+  }
+
+  .optionLabel {
+    &.hasNotification {
+      &:before {
+        background: var(--theme-button-attention-background-color);
+        border-radius: 50%;
+        content: '';
+        display: inline-block;
+        height: 8px;
+        margin-right: 8px;
+        width: 8px;
+      }
+    }
+  }
+
+  &.hasNotification {
+    :global {
+      .SimpleOptions_option:first-child span {
+        &:before {
+          background: var(--theme-button-attention-background-color);
+          border-radius: 50%;
+          content: '';
+          display: inline-block;
+          height: 8px;
+          margin-right: 8px;
+          width: 8px;
+        }
+      }
+    }
+  }
+
+  :global {
+    .NavButton_component {
+      cursor: default;
+    }
+    .SimpleBubble_root:not(.SimpleBubble_transparent) {
+      .SimpleBubble_bubble {
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12);
+        right: 15px;
+        top: -5px;
+        white-space: nowrap;
+        width: auto !important;
+
+        .SimpleOptions_ul {
+          background-color: var(--theme-nav-dropdown-item-background-color);
+          border-radius: 4px;
+
+          .SimpleOptions_option {
+            background: none;
+            font-size: 13px;
+            padding: 5px 10px;
+            text-align: right;
+
+            &.SimpleOptions_selectedOption {
+              font-family: var(--rp-theme-font-bold);
+            }
+
+            &.SimpleOptions_highlightedOption:hover {
+              background-color: var(
+                --theme-nav-dropdown-item-background-color-hover
+              );
+            }
+          }
+
+          .ScrollbarsCustom-Wrapper,
+          .ScrollbarsCustom-Scroller {
+            position: initial !important;
+          }
+        }
+      }
+    }
+    .OptionsOverrides_options {
+      margin-top: 0;
+    }
+  }
+  &:hover {
+    :global {
+      .NavButton_normal .NavButton_container {
+        background-color: var(--theme-nav-item-background-color-hover);
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.component {
+  overflow: visible;
+  position: absolute;
+  right: 100px;
+  &:hover {
+    .info {
+      opacity: 1;
+    }
+  }
+}
+
+.icon {
+  pointer-events: none;
+  svg {
+    height: 22px;
+    width: 22px;
+    path {
+      fill: var(--theme-node-sync-icon-color);
+    }
+  }
+}
+
+.syncing {
+  .icon :global {
+    svg {
+      animation: loading-spin 1.5s linear;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+.synced {
+}
+
+.info {
+  background-color: var(--theme-node-sync-info-message-background-color);
+  border-radius: 4px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+  color: var(--theme-node-sync-info-message-text-color);
+  font-family: var(--font-light);
+  font-size: 14px;
+  opacity: 0;
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: calc(100% + 10px);
+  transition: opacity, 200ms;
+  white-space: nowrap;
+}

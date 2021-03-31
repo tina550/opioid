@@ -1,0 +1,14 @@
+.component {
+  cursor: pointer;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 7px;
+  width: 20.5px;
+
+  svg {
+    path {
+      fill: var(--theme-icon-back-button-color);
+    }
+  }
+}

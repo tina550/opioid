@@ -1,0 +1,10 @@
+.stack-work/
+dist/
+dist-newstyle/
+
+configuration.yaml
+launcher-config.yaml
+
+*genesis*.json
+*.windows
+*.zip

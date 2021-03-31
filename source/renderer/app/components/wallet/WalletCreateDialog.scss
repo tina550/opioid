@@ -1,0 +1,98 @@
+// TODO: Remove once the new wallet creation process is ready
+@import '../../themes/mixins/place-form-field-error-below-input';
+
+.spendingPasswordWrapper {
+  border-top: 1px solid var(--theme-dialog-border-color);
+  margin-top: 30px;
+  padding-top: 20px;
+
+  .passwordSectionLabel {
+    font-family: var(--font-medium);
+    font-size: 16px;
+    line-height: 1.38;
+    margin-bottom: 14px;
+  }
+
+  .passwordSectionDescription {
+    font-family: var(--font-light);
+    font-size: 16px;
+    line-height: 1.38;
+  }
+
+  .spendingPasswordFields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 250px;
+    opacity: 1;
+    overflow: visible;
+    transition: all 400ms ease;
+
+    & > div {
+      margin-top: 20px;
+      width: 275px;
+    }
+
+    .passwordInstructions {
+      color: var(--theme-dialog-text-color);
+      font-family: var(--font-light);
+      line-height: 1.38;
+      margin-top: 10px;
+    }
+
+    .spendingPasswordField {
+      display: flex;
+
+      > span {
+        height: 12px;
+        left: -139px;
+        outline: none;
+        position: relative;
+        top: 5px;
+        width: 12px;
+      }
+
+      &.jpLangTooltipIcon {
+        > span {
+          left: -35px !important;
+        }
+      }
+
+      .infoIcon {
+        height: 14px;
+        opacity: 0.4;
+        transform: translateY(2px);
+        width: 14px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        path {
+          fill: var(--theme-input-label-color);
+        }
+      }
+
+      :global .PasswordInput_root.spendingPassword,
+      :global .PasswordInput_root.repeatedPassword {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.component {
+  :global {
+    .LoadingSpinner_component {
+      margin: 11px auto !important;
+
+      .LoadingSpinner_icon {
+        svg {
+          path {
+            fill: var(--theme-button-primary-text-color-disabled) !important;
+          }
+        }
+      }
+    }
+  }
+}

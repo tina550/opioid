@@ -1,0 +1,21 @@
+.component {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 7px;
+
+  svg {
+    height: 11px;
+    width: 11px;
+
+    polygon {
+      fill: var(--theme-icon-close-button-color);
+    }
+  }
+}
+
+.disabled {
+  @extend .component;
+  cursor: default;
+  opacity: 0.5;
+}

@@ -1,0 +1,42 @@
+.component {
+  background: var(--theme-main-body-background-color);
+  display: flex;
+  height: 100%;
+}
+
+.main {
+  box-shadow: -20px 0 80px 0 var(--theme-sidebar-layout-shadow-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  // Show elements that overflow the main above the sidebar area
+  z-index: 20;
+}
+
+.sidebar {
+  flex: 0;
+  overflow: visible;
+}
+
+.topbar {
+  box-shadow: 0 5px 20px 0 var(--theme-sidebar-layout-topbar-shadow-color);
+  flex-shrink: 0;
+  // Show elements that overflow the topbar above the content area
+  z-index: 20;
+}
+
+.contentWrapper {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: overlay;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

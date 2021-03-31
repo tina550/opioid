@@ -1,0 +1,105 @@
+@import '../../../themes/mixins/error-message';
+
+.component {
+  p {
+    font-family: var(--font-light);
+    font-size: 16px;
+    line-height: 1.38;
+    margin-bottom: 20px;
+
+    b {
+      font-family: var(--font-medium);
+    }
+  }
+}
+
+.walletName {
+  margin-bottom: 20px;
+}
+
+.spendingPasswordFields {
+  display: flex;
+  flex-wrap: wrap;
+
+  .spendingPasswordField {
+    display: flex;
+
+    > span {
+      height: 12px;
+      left: -149px;
+      outline: none;
+      position: relative;
+      top: 1px;
+      width: 12px;
+    }
+
+    &.jpLangTooltipIcon {
+      > span {
+        left: -141px !important;
+      }
+    }
+
+    :global {
+      .PasswordInput_root,
+      .SimplePasswordInput_root {
+        width: 100%;
+      }
+    }
+
+    .infoIcon {
+      height: 14px;
+      opacity: 0.4;
+      transform: translateY(2px);
+      width: 14px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      path {
+        fill: var(--theme-input-label-color);
+      }
+    }
+
+    :global .PasswordInput_root.spendingPassword,
+    :global .PasswordInput_root.repeatedPassword {
+      width: 100%;
+    }
+  }
+}
+
+.spendingPasswordField {
+  flex: 1;
+
+  &:first-child {
+    margin-right: 10px;
+  }
+}
+
+.passwordInstructions {
+  color: var(--theme-dialog-text-color);
+  font-family: var(--font-light);
+  line-height: 1.38;
+  margin-top: 10px;
+}
+
+.error {
+  @include error-message;
+  font-family: var(--font-regular) !important;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dialogComponent {
+  :global {
+    .LoadingSpinner_component {
+      .LoadingSpinner_icon {
+        svg {
+          path {
+            fill: var(--theme-button-primary-text-color-disabled) !important;
+          }
+        }
+      }
+    }
+  }
+}

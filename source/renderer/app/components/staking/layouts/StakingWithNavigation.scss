@@ -1,0 +1,30 @@
+.component {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navigation {
+  flex-shrink: 0;
+  height: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 50px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  &::-webkit-scrollbar-thumb {
+    &:vertical {
+      min-height: 60px !important;
+    }
+  }
+}
+
+.settingsTabPage {
+  overflow: hidden;
+}

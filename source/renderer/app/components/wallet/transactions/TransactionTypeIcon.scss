@@ -1,0 +1,72 @@
+.transactionTypeIconWrapper {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 44px;
+  justify-content: center;
+  opacity: 0.8;
+  width: 44px;
+
+  &.expend {
+    background: var(--theme-transactions-icon-type-expend-background-color);
+  }
+
+  &.income {
+    background: var(--theme-transactions-icon-type-income-background-color);
+  }
+
+  &.exchange {
+    background: var(--theme-transactions-icon-type-exchange-background-color);
+  }
+
+  &.pending {
+    position: relative;
+
+    &_regular {
+      background: var(
+        --theme-transactions-icon-type-pending-regular-background-color
+      );
+    }
+
+    &_warning {
+      background: var(
+        --theme-transactions-icon-type-pending-warning-background-color
+      );
+    }
+  }
+
+  &.expired {
+    background: var(--theme-transactions-icon-type-failed-background-color);
+  }
+}
+
+.pendingTxnIconWrapper {
+  align-items: center;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  position: absolute;
+  width: auto;
+
+  .pendingTxnIcon {
+    & > svg {
+      height: 9px;
+      width: 2px;
+      path {
+        fill: var(--theme-icon-transaction-type-color);
+      }
+    }
+  }
+}
+
+.transactionTypeIcon {
+  display: flex;
+  & > svg {
+    height: 19px;
+    width: 23px;
+    path {
+      fill: var(--theme-icon-transaction-type-color);
+    }
+  }
+}

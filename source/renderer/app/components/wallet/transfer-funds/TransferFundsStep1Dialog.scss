@@ -1,0 +1,28 @@
+@import '../../../themes/mixins/loading-spinner';
+@import '../../../themes/mixins/error-message';
+
+.label {
+  color: var(--rp-formfield-label-text-color, #5e6066);
+  font-family: var(--font-medium);
+  font-size: 16px;
+  line-height: 1.38;
+  margin-bottom: 10px;
+}
+
+.sourceWallet {
+  background-color: var(
+    --theme-transactions-transfer-funds-selected-wallet-background-color
+  );
+  margin-bottom: 20px;
+}
+
+.error {
+  @include error-message;
+  margin-top: 27px;
+  text-align: center;
+}
+
+.isSubmitting {
+  box-shadow: none !important;
+  @include loading-spinner('../../../assets/images/spinner-light.svg');
+}

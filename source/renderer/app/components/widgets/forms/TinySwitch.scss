@@ -1,0 +1,45 @@
+$height: 12px !important;
+$width: 24px !important;
+
+.component {
+  flex-direction: row;
+  left: -2.5px;
+
+  :global {
+    .SimpleSwitch_switch {
+      border-radius: var(--rp-switch-normal-border-radius) !important;
+      margin-left: 6px;
+
+      &:not(.SimpleSwitch_checked) {
+        height: $height;
+        width: $width;
+
+        span {
+          left: 2px;
+          top: 2px;
+        }
+      }
+
+      &.SimpleSwitch_checked {
+        height: $height;
+        width: $width;
+
+        span {
+          left: 14px !important;
+          top: 2px;
+        }
+      }
+    }
+  }
+
+  span {
+    border-radius: var(--rp-switch-tiny-border-radius);
+    height: 8px !important;
+    width: 8px !important;
+  }
+
+  label {
+    font-family: var(--font-regular);
+    margin: 0 0 0 6px !important;
+  }
+}

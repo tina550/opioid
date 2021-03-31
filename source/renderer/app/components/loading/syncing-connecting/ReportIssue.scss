@@ -1,0 +1,65 @@
+@import '../../../themes/mixins/link';
+
+.component {
+  background-color: var(--theme-report-issue-connecting-background-color);
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.reportIssueText {
+  color: var(--theme-report-issue-connecting-text-color);
+  font-family: var(--font-regular);
+  font-size: 18px;
+  line-height: 1.22;
+  margin-top: 24px;
+}
+
+.actionButton {
+  background-color: var(--theme-report-issue-button-background-color);
+  margin: 20px 10px 10px;
+  width: 240px;
+
+  &:hover {
+    background-color: var(
+      --theme-report-issue-button-background-color-hover
+    ) !important;
+  }
+
+  &:active {
+    background-color: var(
+      --theme-report-issue-button-background-color-active
+    ) !important;
+  }
+
+  .externalLinkIcon {
+    @include link(--theme-report-issue-icon-color);
+    border-bottom: none;
+    margin-right: 10px;
+    vertical-align: baseline;
+    width: 15px;
+    svg {
+      margin-left: 0;
+      vertical-align: sub;
+      width: 15px;
+      g {
+        stroke-width: 2px;
+      }
+    }
+  }
+}
+
+.downloadLogsButton {
+  border-color: var(--theme-report-issue-connecting-text-color) !important;
+  color: var(--theme-report-issue-connecting-text-color) !important;
+  display: inline-block;
+  font-family: var(--font-regular);
+  margin-bottom: 20px;
+  opacity: 0.8;
+  &.disabled {
+    border-color: transparent !important;
+    cursor: default;
+    text-decoration: none;
+  }
+}

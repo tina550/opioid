@@ -1,0 +1,107 @@
+@import '../../themes/mixins/buttons';
+@import './sidebarConfig';
+
+.component {
+  @include button;
+  align-items: center;
+  background-color: var(--theme-sidebar-background-color);
+  color: var(--theme-sidebar-category-text-color);
+  display: flex;
+  height: $sidebar-button-height;
+  justify-content: center;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--theme-sidebar-category-background-color-hover);
+  }
+}
+
+.active {
+  background-color: var(--theme-sidebar-category-background-color-active);
+
+  &:hover {
+    background-color: var(--theme-sidebar-category-background-color-active);
+    cursor: default;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+
+  & > svg {
+    height: 24px;
+    width: 24px;
+
+    & > path,
+    & > g > path {
+      fill: var(--theme-icon-sidebar-color);
+    }
+    // ada.svg icon needs stroke attribute
+    & > g > g {
+      stroke: var(--theme-icon-sidebar-color);
+    }
+  }
+}
+
+.redeemItnRewardsIcon {
+  & > svg {
+    height: 44px;
+    width: 44px;
+  }
+}
+
+.paperWalletCreateCertificateIcon {
+  & > svg {
+    height: 21px;
+    margin-left: -4px;
+    width: 31px;
+  }
+}
+
+.stakingDelegationCountdownIcon {
+  & > svg {
+    height: 23px;
+    width: 33px;
+  }
+}
+
+.stakingIcon {
+  & > svg {
+    height: 55px;
+    margin-top: -4px;
+    width: 56px;
+  }
+}
+
+.networkInfo {
+  background-color: var(--theme-sidebar-category-networkInfo-background-color);
+  border-radius: 0 5px 5px 0;
+  bottom: 16.5px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.12);
+  height: 50px;
+  justify-content: space-between;
+  max-width: 71px;
+  overflow: hidden;
+  padding: 0 26px;
+  position: absolute;
+  transition: max-width 0.2s ease-out;
+  width: auto;
+  z-index: 21;
+
+  &:hover {
+    background-color: var(
+      --theme-sidebar-category-networkInfo-background-color
+    );
+    max-width: 465px;
+  }
+}
+
+.networkInfoIcon {
+  & > svg {
+    height: 29px;
+    width: 32px;
+    path {
+      fill: var(--theme-sidebar-category-networkInfo-text-color);
+    }
+  }
+}

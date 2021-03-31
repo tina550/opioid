@@ -1,0 +1,102 @@
+// ========= LAYOUT =========
+
+.component {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+
+  &.hasNotification {
+    .container {
+      position: relative;
+      &:after {
+        background: var(--theme-button-attention-background-color);
+        border-radius: 50%;
+        content: '';
+        height: 8px;
+        transform: translate(4px, -4px);
+        width: 8px;
+      }
+      .icon {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.container {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  justify-content: center;
+  padding: 0 5px;
+  text-align: center;
+  width: calc(100% - 30px);
+}
+
+.label {
+  display: block;
+  font-family: var(--font-regular);
+  font-size: 14px;
+  line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-right: 10px;
+
+  & > svg {
+    max-height: 19px;
+    max-width: 19px;
+    width: 100%;
+  }
+
+  @media (max-width: 950px) {
+    display: none;
+  }
+}
+
+// ========= STATES =========
+
+.activeIcon {
+  path {
+    fill: var(--theme-icon-nav-color-active);
+  }
+}
+
+.normalIcon {
+  path {
+    fill: var(--theme-icon-nav-color);
+  }
+}
+
+.normal {
+  .container {
+    color: var(--theme-nav-item-text-color);
+  }
+
+  &:hover {
+    .container {
+      background-color: var(--theme-nav-item-background-color-hover);
+    }
+    cursor: pointer;
+  }
+}
+
+.active {
+  .container {
+    background-color: var(--theme-nav-item-background-color-active);
+    color: var(--theme-nav-item-text-color-active);
+  }
+
+  &:hover {
+    cursor: default;
+  }
+}

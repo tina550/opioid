@@ -1,0 +1,65 @@
+.terms {
+  color: var(--theme-support-settings-text-color);
+  text-align: justify;
+  user-select: text;
+
+  a {
+    border-bottom: 1px solid var(--theme-support-settings-link-color);
+    color: var(--theme-support-settings-link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  hr {
+    border-color: var(--theme-support-settings-text-color);
+    margin: 25px 0 30px;
+    opacity: 0.15;
+  }
+
+  h1,
+  h2 {
+    font-family: var(--font-medium);
+  }
+
+  h1 {
+    font-size: 21px;
+    margin-bottom: 11px;
+  }
+
+  h2 {
+    font-size: 19px;
+    margin-bottom: 11px;
+    margin-top: 22px;
+  }
+
+  ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+
+  ol {
+    list-style: decimal;
+    margin-left: 20px;
+
+    li {
+      p {
+        margin-left: 2px;
+      }
+    }
+  }
+
+  p,
+  li {
+    font-family: var(--font-light);
+    line-height: 1.38;
+    margin-bottom: 11px;
+
+    strong {
+      font-family: var(--font-medium);
+      font-weight: normal;
+    }
+  }
+  li {
+    margin-bottom: 4px;
+  }
+}

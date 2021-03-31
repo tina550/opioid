@@ -1,0 +1,29 @@
+.component {
+  height: 100%;
+  width: 100%;
+  width: -webkit-calc(100% + 20px);
+
+  *::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  :global(.ReactVirtualized__Grid__innerScrollContainer) {
+    overflow: visible !important;
+  }
+}
+
+.list {
+  overflow-x: hidden !important;
+  padding-right: 2px;
+  will-change: none !important;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.address {
+  & + .address {
+    border-top: 1px solid var(--theme-dialog-border-color);
+  }
+}

@@ -1,0 +1,73 @@
+@import '../../../themes/mixins/error-message';
+
+.component {
+  background-color: var(--theme-main-body-background-color);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-regular);
+  height: 100%;
+  padding: 20px;
+
+  :global {
+    .SimpleFormField_label {
+      color: var(--theme-input-label-color);
+    }
+
+    .walletName {
+      .SimpleInput_input {
+        padding-right: 120px;
+      }
+    }
+  }
+
+  .walletPublicKeyBox {
+    margin-top: 20px;
+  }
+
+  .undelegateWalletBox,
+  .deleteWalletBox {
+    margin-top: 20px;
+
+    span {
+      color: var(--theme-input-label-color);
+      font-family: var(--font-medium);
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+
+    .contentBox {
+      align-items: center;
+      color: var(--theme-bordered-box-text-color);
+      display: flex;
+      flex-direction: row;
+      font-family: var(--font-light);
+      justify-content: space-between;
+      line-height: 1.38;
+      padding-top: 14px;
+
+      p:first-child {
+        margin-bottom: 15px;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .undelegateWalletBox {
+    :global {
+      .SimpleButton_root.flat {
+        color: var(--theme-color-error);
+      }
+    }
+  }
+
+  .deleteWalletBox {
+    margin-bottom: 20px;
+  }
+}
+
+.error {
+  @include error-message;
+  text-align: center;
+}

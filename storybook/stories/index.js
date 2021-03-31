@@ -1,0 +1,32 @@
+// @flow
+import '../../source/renderer/app/themes/index.global.scss';
+import './_support/environment';
+
+// Wallets
+import './wallets';
+
+// Nodes
+import './nodes';
+
+// Staking
+import './staking/Staking.stories';
+
+// Voting
+import './voting/Voting.stories';
+
+// Settings
+import './settings';
+
+// News
+import './news/NewsFeed.stories';
+import './news/IncidentOverlay.stories';
+import './news/AlertsOverlay.stories';
+import './news/AppUpdateOverlay.stories';
+
+// Navigation
+import './navigation/Sidebar.stories';
+import './navigation/SidebarCategory.stories';
+import './navigation/SidebarWalletsMenu.stories';
+
+// Common
+import './common/Widgets.stories';

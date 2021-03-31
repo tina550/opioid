@@ -1,0 +1,45 @@
+.dialog {
+  font-family: var(--font-light);
+
+  :global {
+    .SimpleCheckbox_root {
+      margin-top: 20px;
+
+      .SimpleCheckbox_check {
+        border-color: var(--theme-input-remove-color-light);
+
+        &.SimpleCheckbox_checked {
+          background: var(--theme-input-remove-color-light);
+        }
+      }
+    }
+
+    .attention {
+      color: var(
+        --theme-button-attention-delete-text-color-disabled
+      ) !important;
+
+      &:not([disabled]) {
+        color: var(--theme-button-attention-delete-text-color) !important;
+      }
+    }
+  }
+
+  .confirmationInput {
+    margin-top: 20px;
+  }
+
+  :global {
+    .LoadingSpinner_component {
+      .LoadingSpinner_icon {
+        svg {
+          path {
+            fill: var(
+              --theme-button-attention-delete-text-color-disabled
+            ) !important;
+          }
+        }
+      }
+    }
+  }
+}

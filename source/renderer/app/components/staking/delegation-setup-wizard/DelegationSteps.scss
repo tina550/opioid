@@ -1,0 +1,36 @@
+.delegationSteps {
+  font-family: var(--font-regular);
+
+  :global {
+    .Dialog_title {
+      letter-spacing: 2px;
+      margin-bottom: 0;
+    }
+
+    .BackToTopButton_component {
+      margin-left: 0 !important;
+    }
+  }
+
+  .delegationStepsIndicatorWrapper {
+    margin: 4px auto;
+    width: 300px;
+
+    .stepIndicatorLabel {
+      color: var(--theme-delegation-steps-activation-steps-indicator-color);
+      font-family: var(--font-medium);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.83;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  .content {
+    font-size: 16px;
+    line-height: 1.38;
+    margin-top: 20px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,30 @@
+.component {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  overflow-y: overlay;
+  padding: 20px 0;
+}
+
+.notification {
+  color: var(--theme-transactions-list-group-date-color);
+  font-family: var(--font-regular);
+  font-size: 16px;
+  line-height: 1.38;
+  margin-top: 10px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.buttonsContainer {
+  margin: auto;
+  max-width: 640px;
+}
+
+.firstRow {
+  display: flex;
+}
+
+.secondRow {
+  display: flex;
+}

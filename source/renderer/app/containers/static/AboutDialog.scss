@@ -1,0 +1,29 @@
+.overlay {
+  background-color: var(--theme-about-window-background-color);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+
+  &::-webkit-scrollbar-button {
+    height: 21px;
+  }
+
+  @media (max-width: 950px), (max-height: 678px) {
+    overflow-y: overlay;
+  }
+}
+
+.dialog {
+  margin: auto 0;
+  max-width: 980px;
+  overflow: hidden;
+
+  &:focus {
+    outline: none;
+  }
+}

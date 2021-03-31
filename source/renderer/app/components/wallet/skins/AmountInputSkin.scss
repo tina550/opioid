@@ -1,0 +1,31 @@
+@import '../../../themes/mixins/animations';
+
+.root {
+  position: relative;
+}
+
+.fees,
+.calculatingFees {
+  bottom: 60px;
+  color: var(--theme-input-right-floating-text-color);
+  font-family: var(--font-light);
+  font-size: 14px;
+  position: absolute;
+  right: 19px;
+  user-select: none;
+}
+
+.calculatingFees {
+  @include animated-ellipsis($duration: 1500, $width: 20px);
+}
+
+.total {
+  bottom: 16px;
+  color: var(--theme-input-right-floating-text-color);
+  font-family: var(--font-light);
+  font-size: 16px;
+  position: absolute;
+  right: 20px;
+  text-transform: uppercase;
+  user-select: none;
+}

@@ -1,0 +1,14 @@
+.component {
+  text {
+    fill: var(--theme-utxo-tick-text-color);
+    font-family: var(--font-regular);
+    font-size: 10px;
+    font-weight: 600;
+  }
+}
+
+.vertical {
+  text {
+    transform: rotate(90deg) translate(0, 4px);
+  }
+}

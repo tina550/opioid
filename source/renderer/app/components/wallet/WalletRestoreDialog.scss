@@ -1,0 +1,158 @@
+@import '../../themes/mixins/error-message';
+@import '../../themes/mixins/place-form-field-error-below-input';
+
+.component {
+  &.dialogWithCertificateRestore {
+    :global {
+      .Dialog_title {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .walletName {
+    margin-bottom: 20px;
+  }
+
+  .newLabel {
+    background-color: var(
+      --theme-wallet-restore-dialog-new-label-background-color
+    );
+    border-radius: 3px;
+    color: var(--theme-wallet-restore-dialog-new-label-color);
+    font-family: var(--font-bold);
+    font-size: 8px;
+    font-weight: bold;
+    margin-left: 6px;
+    opacity: 1 !important;
+    padding: 2px 8px 3px 8px;
+    position: relative;
+    text-transform: uppercase;
+    top: -2px;
+  }
+
+  .spendingPasswordWrapper {
+    border-top: 1px solid var(--theme-dialog-border-color);
+    margin-top: 30px;
+    padding-top: 20px;
+
+    .passwordSectionLabel {
+      font-family: var(--font-medium);
+      font-size: 16px;
+      line-height: 1.38;
+      margin-bottom: 14px;
+    }
+
+    .passwordSectionDescription {
+      font-family: var(--font-light);
+      font-size: 16px;
+      line-height: 1.38;
+    }
+
+    .spendingPasswordFields {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-height: 250px;
+      opacity: 1;
+      overflow: visible;
+      transition: all 400ms ease;
+
+      & > div {
+        margin-top: 20px;
+        width: 275px;
+      }
+
+      @include place-form-field-error-below-input;
+
+      .passwordInstructions {
+        color: var(--theme-dialog-text-color);
+        font-family: var(--font-light);
+        line-height: 1.38;
+        margin-top: 10px;
+      }
+
+      .spendingPasswordField {
+        display: flex;
+
+        > span {
+          height: 12px;
+          left: -140px;
+          outline: none;
+          position: relative;
+          top: 2px;
+          width: 12px;
+        }
+
+        &.jpLangTooltipIcon {
+          > span {
+            left: -35px !important;
+          }
+        }
+
+        .infoIcon {
+          height: 14px;
+          opacity: 0.4;
+          transform: translateY(2px);
+          width: 14px;
+
+          &:hover {
+            opacity: 0.8;
+          }
+
+          path {
+            fill: var(--theme-input-label-color);
+          }
+        }
+
+        :global .PasswordInput_root.spendingPassword,
+        :global .PasswordInput_root.repeatedPassword {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .restoreTypeChoice {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+
+    button {
+      color: var(--theme-choice-tabs-text-color);
+      cursor: pointer;
+      flex: 1;
+      font-family: var(--font-medium);
+      font-size: 14px;
+      opacity: 0.5;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .activeButton {
+      border-bottom: 2px solid
+        var(--theme-choice-tabs-bottom-border-color-active);
+      color: var(--theme-choice-tabs-text-color-active);
+      cursor: default;
+      opacity: 1;
+    }
+  }
+
+  .error {
+    @include error-message;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  :global {
+    .LoadingSpinner_component {
+      .LoadingSpinner_icon {
+        svg {
+          path {
+            fill: var(--theme-button-primary-text-color-disabled) !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.dialogWrapper {
+  color: var(--theme-dialog-title-color);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+  width: 580px;
+
+  & > .title {
+    font-family: var(--font-medium);
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.39;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  & > .subtitle {
+    font-family: var(--font-medium);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.83;
+    text-align: center;
+  }
+
+  & > .contentWrapper {
+    flex: 1;
+    margin-right: -25px;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    padding-right: 25px;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+      margin-bottom: 12px;
+      margin-top: -8px;
+    }
+
+    .content {
+      margin-bottom: 20px;
+    }
+  }
+
+  & > .actions {
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 10px;
+
+    &.columnDirection {
+      align-items: center;
+      flex-direction: column;
+      > *:first-child {
+        margin-bottom: 20px;
+      }
+    }
+
+    &.rowDirection {
+      flex-direction: row;
+    }
+
+    button {
+      width: 50%;
+
+      &:only-child {
+        margin: auto;
+        width: 65%;
+      }
+
+      & + button {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  :global {
+    .LoadingSpinner_component {
+      margin: 11px auto !important;
+
+      .LoadingSpinner_icon {
+        svg {
+          path {
+            fill: var(--theme-button-primary-text-color-disabled) !important;
+          }
+        }
+      }
+    }
+  }
+}

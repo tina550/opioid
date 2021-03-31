@@ -1,0 +1,18 @@
+.component {
+  &:hover {
+    .exclamationPointIcon {
+      opacity: 1;
+    }
+  }
+}
+
+.exclamationPointIcon {
+  opacity: 0.3;
+
+  svg {
+    height: 14px;
+    margin-left: 6px;
+    transform: translateY(2px);
+    width: 14px;
+  }
+}
