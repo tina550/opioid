@@ -248,7 +248,7 @@
     "spectron-fake-dialog": "0.0.1",
     "trezor-connect": "8.1.22-extended",
     "unorm": "1.6.0",
-    "validator": "13.1.17"
+    "validator": "13.7.0"
   },
   "optionalDependencies": {
     "@ledgerhq/hw-transport-node-hid": "5.26.0"
